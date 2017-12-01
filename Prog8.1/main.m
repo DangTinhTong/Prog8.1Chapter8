@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ClassB.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+       // NSLog(@"Hello, World!");
+        
+        ClassB *myClassB = [[ClassB alloc] init];
+        
+        [myClassB initVar];  // Will use inherited method
+        [myClassB printVar]; // reveal value of x
     }
     return 0;
 }
